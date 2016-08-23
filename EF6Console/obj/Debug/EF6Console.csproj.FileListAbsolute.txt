@@ -1,0 +1,12 @@
+C:\VSWorkSpace\EF6Console\EF6Console\bin\Debug\EF6Console.exe.config
+C:\VSWorkSpace\EF6Console\EF6Console\bin\Debug\EF6Console.exe
+C:\VSWorkSpace\EF6Console\EF6Console\bin\Debug\EF6Console.pdb
+C:\VSWorkSpace\EF6Console\EF6Console\bin\Debug\EntityFramework.dll
+C:\VSWorkSpace\EF6Console\EF6Console\bin\Debug\EntityFramework.SqlServer.dll
+C:\VSWorkSpace\EF6Console\EF6Console\bin\Debug\EntityFramework.xml
+C:\VSWorkSpace\EF6Console\EF6Console\bin\Debug\EntityFramework.SqlServer.xml
+C:\VSWorkSpace\EF6Console\EF6Console\obj\Debug\EF6Console.csprojResolveAssemblyReference.cache
+C:\VSWorkSpace\EF6Console\EF6Console\obj\Debug\EF6Console.exe
+C:\VSWorkSpace\EF6Console\EF6Console\obj\Debug\EF6Console.pdb
+C:\VSWorkSpace\EF6Console\EF6Console\bin\Debug\EFConsole1.mdf
+C:\VSWorkSpace\EF6Console\EF6Console\bin\Debug\EFConsole1_log.ldf
