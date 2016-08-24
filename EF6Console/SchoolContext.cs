@@ -16,5 +16,12 @@ namespace EF6Console
 
         public DbSet<Student> Students { get; set; }
         public DbSet<Standard> Standards { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Student>()
+                 .HasOptional(s => s.Address)
+                 .WithRequired(ad => ad.Student);
+        }
     }
 }
