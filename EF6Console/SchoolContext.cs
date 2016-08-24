@@ -16,6 +16,8 @@ namespace EF6Console
 
         public DbSet<Student> Students { get; set; }
         public DbSet<Standard> Standards { get; set; }
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<StudentAddress> StudentAddresses { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

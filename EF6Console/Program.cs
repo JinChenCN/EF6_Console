@@ -12,13 +12,25 @@ namespace EF6Console
         {
             using (var ctx = new SchoolContext())
             {
-                Student stud = new Student() { StudentName = "test", Address = new StudentAddress()};
+                var courses = new List<Course>
+                {
+                    new Course { CourseName = "Art"},
+                    new Course { CourseName = "Math"}
+                };
+
+                courses.ForEach(c => ctx.Courses.Add(c));
+                ctx.SaveChanges();
+
+                var stud = new Student() { StudentName = "test", Address = new StudentAddress() { Country = "China"}, Courses = courses };
                 ctx.Students.Add(stud);
                 ctx.SaveChanges();
 
-                var student = ctx.Students.FirstOrDefault();
+                var student = ctx.Students.Find(5);
                 Console.WriteLine(student.StudentName);
-                Console.WriteLine(student.Address.StudentAddressId);
+                Console.WriteLine(student.Address.Country);
+                Console.WriteLine(student.Courses.Count);
+
+                Console.ReadKey();
             }
 
         }

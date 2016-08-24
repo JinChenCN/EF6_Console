@@ -19,6 +19,7 @@ namespace EF6Console
         public float Weight { get; set; }
         public Standard Standard { get; set; }
         public virtual StudentAddress Address { get; set; }
+        public virtual ICollection<Course> Courses { get; set; }
     }
 
     public class StudentAddress
@@ -33,5 +34,17 @@ namespace EF6Console
         public string Country { get; set; }
 
         public virtual Student Student { get; set; }
+    }
+
+    public class Course
+    {
+        public Course()
+        {
+            this.Students = new HashSet<Student>();
+        }
+
+        public int CourseId { get; set; }
+        public string CourseName { get; set; }
+        public virtual ICollection<Student> Students { get; set; }
     }
 }
