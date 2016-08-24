@@ -12,11 +12,13 @@ namespace EF6Console
         {
             using (var ctx = new SchoolContext())
             {
-                Student stud = new Student() { StudentName = "test" };
+                Student stud = new Student() { StudentName = "test", Address = new StudentAddress()};
                 ctx.Students.Add(stud);
                 ctx.SaveChanges();
 
-                Console.WriteLine(ctx.Students.FirstOrDefault().StudentName);
+                var student = ctx.Students.FirstOrDefault();
+                Console.WriteLine(student.StudentName);
+                Console.WriteLine(student.Address.StudentAddressId);
             }
 
         }

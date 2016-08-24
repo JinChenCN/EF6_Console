@@ -9,7 +9,10 @@ namespace EF6Console
 {
    public class SchoolContext : DbContext
     {
-        public SchoolContext() { }
+        public SchoolContext() : base()
+        {
+            Database.SetInitializer<SchoolContext>(new DropCreateDatabaseIfModelChanges<SchoolContext>());
+        }
 
         public DbSet<Student> Students { get; set; }
         public DbSet<Standard> Standards { get; set; }
